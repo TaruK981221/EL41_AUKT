@@ -7,7 +7,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     float speed = 5;
 
+    [SerializeField]
+    GameObject Ball;
+
     Rigidbody2D rb;
+
+    bool isStart = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,15 @@ public class Player : MonoBehaviour
 
             rb.velocity =
                 new Vector2(speed, 0);
+        }
+        
+
+        if (!isStart &&
+            (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            Ball.GetComponent<BaseBall>().enabled = true;
+
+            isStart = true;
         }
     }
 }

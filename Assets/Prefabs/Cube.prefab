@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4474824276773722560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.2, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -141,3 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90abc865b9655f24faaf45c8f18eedaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addScore: 100
+  Hidekis:
+  - {fileID: 1669447068465906683, guid: 9c2fd363aa0f9534ab0043b98888dc65, type: 3}
+  - {fileID: 1402298741441818831, guid: 0cee1424ec90c7f49920c4cad6e5d058, type: 3}
+  - {fileID: 547079313148219788, guid: 137e6f93757973c4d8c17df777ab702a, type: 3}
+  - {fileID: 310238016120159839, guid: 50dfa8a01f43d724e9da9c45d32ff68c, type: 3}
