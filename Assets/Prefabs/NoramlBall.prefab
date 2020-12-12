@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3629776295443514492}
   - component: {fileID: 3629776295443514491}
   - component: {fileID: 3629776295443514490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NoramlBall
   m_TagString: Ball
   m_Icon: {fileID: 0}
