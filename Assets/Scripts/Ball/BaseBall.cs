@@ -44,6 +44,12 @@ public class BaseBall : MonoBehaviour
 	}
 	protected virtual void FixedUpdate()
 	{
+		if (transform.position.y < BallManager.instance.deathBallHeight)
+		{
+			BallManager.instance.DeathBall(gameObject);
+			return;
+		}
+
 		m_addMaxTime -= Time.fixedDeltaTime;
 		if (m_addMaxTime <= 0.0f)
 		{

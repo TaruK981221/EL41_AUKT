@@ -8,11 +8,15 @@ public static class BGMPath{
 	public const string BATTLE27                   = "BGM/Battle/battle27";
 	public const string BGM_MAOUDAMASHII_FANTASY03 = "BGM/bgm_maoudamashii_fantasy03";
 	public const string FANTASY14                  = "BGM/fantasy14";
+	public const string GAME_BGM                   = "BGM/GameBGM";
+	public const string GAME_CLEAR                 = "BGM/GameClear";
 	public const string GAME_MAIN                  = "BGM/GameMain";
+	public const string GAME_OVER                  = "BGM/GameOver";
 	public const string HEARTBEAT01                = "BGM/heartbeat01";
 	public const string PICOPICOMARCH              = "BGM/picopicomarch";
 	public const string TAMN05LOOP                 = "BGM/tam-n05loop";
 	public const string TITLE_BGM                  = "BGM/TitleBgm";
+	public const string TITLE_THEME                = "BGM/TitleTheme";
 	public const string WAKING_WITH_RAGE           = "BGM/Waking_with_rage";
 
 }
