@@ -7,6 +7,8 @@ public class ExplosionBall : BaseBall
 	[SerializeField]
 	GameObject m_explosionEffect = null;
 	[SerializeField]
+	AudioSource m_audioSource = null;
+	[SerializeField]
 	float m_explosionTimeRangeStart = 5.0f;
 	[SerializeField]
 	float m_explosionTimeRangeEnd = 10.0f;

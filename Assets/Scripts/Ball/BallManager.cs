@@ -7,6 +7,7 @@ public class BallManager : MonoBehaviour
 {
 	public static BallManager instance { get; private set; } = null;
 	public float deathBallHeight { get { return m_deathBallHeight; } }
+	public int numBalls { get; private set; } = 0;
 
 	[SerializeField]
 	GameObject m_deathEffect = null;
@@ -18,6 +19,11 @@ public class BallManager : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
+	}
+
+	public void RegisterBall()
+	{
+		++numBalls;
 	}
 
 	public void DeathBall(GameObject deathObject)

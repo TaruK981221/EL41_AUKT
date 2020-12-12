@@ -31,6 +31,8 @@ public class BaseBall : MonoBehaviour
 	// Start is called before the first frame update
 	protected virtual void Start()
     {
+		BallManager.instance.RegisterBall();
+
 		m_rigidbody = GetComponent<Rigidbody2D>();
 		m_rigidbody.AddForce(m_firstForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
 		m_rigidbody.AddTorque(m_firstTorque * Time.fixedDeltaTime, ForceMode2D.Impulse);
