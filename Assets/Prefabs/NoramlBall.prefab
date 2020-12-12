@@ -16,11 +16,11 @@ GameObject:
   - component: {fileID: 3629776295443514490}
   m_Layer: 0
   m_Name: NoramlBall
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3629776295443514495
 Transform:
   m_ObjectHideFlags: 0
