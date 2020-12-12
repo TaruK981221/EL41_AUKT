@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Kajitani/Title.unity
+    guid: b3614a353ca5a9e49900b8d51872071b
+  - enabled: 1
+    path: Assets/Kajitani/Result.unity
+    guid: a86e7066b38354a4c807927f3454d9ee
+  - enabled: 1
+    path: Assets/Scenes/SampleScene2.unity
+    guid: 5c5f1c7cc065add4698f17f6be4aa562
+  - enabled: 1
+    path: Assets/Scenes/SampleScene3.unity
+    guid: a1eb10afd3fc1234a899fd3e3f6e93c3
+  - enabled: 1
+    path: Assets/Scenes/SampleScene4.unity
+    guid: 24048fac7f5bf164fbaba5156c4657d7
   m_configObjects: {}

@@ -12,10 +12,14 @@ public class Block_Death : MonoBehaviour
     [SerializeField]
     List<GameObject> Hidekis;
 
+    bool isis = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         ScoreAdd = GameObject.Find("ScoreManager");
+
     }
 
     // Update is called once per frame
@@ -26,8 +30,10 @@ public class Block_Death : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Ball" && !isis)
         {
+            isis = true;
+
             ScoreAdd.GetComponent<SceneMana>().AddScore(addScore);
 
             int rand = Random.Range(0, Hidekis.Count + 2);
@@ -38,6 +44,8 @@ public class Block_Death : MonoBehaviour
                 Hidekis[rand],
                 collision.transform.position,
                 Quaternion.identity);
+
+
 
             Destroy(this.gameObject);
         }
