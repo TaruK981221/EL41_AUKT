@@ -15,6 +15,18 @@ public class BaseBall : MonoBehaviour
 
 	Rigidbody2D m_rigidbody = null;
 	float m_maxSpeed = 0.0f;
+	float m_addMaxSpeed = 0.0f;
+	float m_nowAddMaxSpeed = 0.0f;
+	float m_addMaxSpeedSubScaler = 0.0f;
+	float m_addMaxTime = 0.0f;
+
+	public void RegisterBounce(float addMaxSpeed,
+		float addMaxSpeedSubScaler, float addMaxTime)
+	{
+		m_nowAddMaxSpeed = m_addMaxSpeed = addMaxSpeed;
+		m_addMaxSpeedSubScaler = addMaxSpeedSubScaler;
+		m_addMaxTime = addMaxTime;
+	}
 
 	// Start is called before the first frame update
 	protected virtual void Start()
@@ -32,6 +44,13 @@ public class BaseBall : MonoBehaviour
 	}
 	protected virtual void FixedUpdate()
 	{
-		m_rigidbody.velocity = m_rigidbody.velocity.normalized * m_maxSpeed;
+		m_addMaxTime -= Time.fixedDeltaTime;
+		if (m_addMaxTime <= 0.0f)
+		{
+			m_nowAddMaxSpeed -= m_addMaxSpeed * m_addMaxSpeedSubScaler * Time.fixedDeltaTime;
+			if (m_nowAddMaxSpeed <= 0.0f) m_nowAddMaxSpeed = 0.0f;
+		}
+
+		m_rigidbody.velocity = m_rigidbody.velocity.normalized * (m_maxSpeed + m_nowAddMaxSpeed);
 	}
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1669447068465906686}
   - component: {fileID: 1669447068465906681}
   - component: {fileID: 1669447068465906680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NormalHideki
   m_TagString: Ball
   m_Icon: {fileID: 0}
