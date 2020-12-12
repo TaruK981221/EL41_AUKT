@@ -200,8 +200,8 @@ MonoBehaviour:
   m_hitTorqueRangeStart: 0
   m_hitTorqueRangeEnd: 206.35
   m_explosionEffect: {fileID: 438395866507146299}
-  m_explosionTimeRangeStart: 5
-  m_explosionTimeRangeEnd: 10
+  m_explosionTimeRangeStart: 1
+  m_explosionTimeRangeEnd: 3
 --- !u!1001 &438395866507244177
 PrefabInstance:
   m_ObjectHideFlags: 0
