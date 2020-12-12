@@ -14,6 +14,10 @@ public class BallManager : MonoBehaviour
 	[SerializeField]
 	AudioSource m_deathSound = null;
 	[SerializeField]
+	AudioSource m_hitSound = null;
+	[SerializeField]
+	AudioSource m_hitSoundToBall = null;
+	[SerializeField]
 	float m_deathBallHeight = -10.0f;
 
 	void Awake()
@@ -25,12 +29,18 @@ public class BallManager : MonoBehaviour
 	{
 		++numBalls;
 	}
+	public void PlayHitSound(bool isBall)
+	{
+		if (!isBall) m_hitSound.PlayOneShot(m_hitSound.clip);
+		else m_hitSoundToBall.PlayOneShot(m_hitSoundToBall.clip);
+	}
 
 	public void DeathBall(GameObject deathObject)
 	{
 		var obj = Instantiate(m_deathEffect);
 		obj.transform.position = deathObject.transform.position;
 		obj.SetActive(true);
+		--numBalls;
 
 		m_deathSound.PlayOneShot(m_deathSound.clip);
 		Destroy(deathObject);

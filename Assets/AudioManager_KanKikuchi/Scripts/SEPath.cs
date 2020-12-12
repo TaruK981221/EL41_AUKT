@@ -5,18 +5,24 @@
 /// </summary>
 public static class SEPath{
 
+	public const string _GAME_SWORDMANDEATH1     = "SE/EL/_game_swordman-death1";
 	public const string BLOCK_HIT                = "SE/EL/block_hit";
 	public const string BOMB1                    = "SE/EL/bomb1";
 	public const string CANCEL2                  = "SE/cancel2";
 	public const string COIN03                   = "SE/coin03";
+	public const string CURSOR2                  = "SE/EL/cursor2";
+	public const string DAMAGE                   = "SE/EL/damage";
+	public const string DAMAGE2                  = "SE/EL/damage2";
 	public const string DECISION                 = "SE/Decision";
 	public const string DECISION1                = "SE/EL/decision1";
 	public const string DROP                     = "SE/drop";
 	public const string FIREWORKS1               = "SE/EL/fireworks1";
 	public const string HAGIKU                   = "SE/Hagiku";
+	public const string HIT                      = "SE/EL/hit";
 	public const string IN                       = "SE/in";
 	public const string JINGLE10                 = "SE/Jingle/jingle10";
 	public const string KICK                     = "SE/kick";
+	public const string PON                      = "SE/EL/pon";
 	public const string RIZALT                   = "SE/rizalt";
 	public const string SCREAM1                  = "SE/EL/scream1";
 	public const string SE_MAOUDAMASHII_BATTLE09 = "SE/se_maoudamashii_battle09";

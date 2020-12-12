@@ -9,11 +9,15 @@ public class ExplosionBall : BaseBall
 	[SerializeField]
 	AudioSource m_audioSource = null;
 	[SerializeField]
+	SpriteRenderer m_sprite = null;
+	[SerializeField]
 	float m_explosionTimeRangeStart = 5.0f;
 	[SerializeField]
 	float m_explosionTimeRangeEnd = 10.0f;
 
 	float m_counter = 0.0f;
+	float m_seCounter = 0.0f;
+	bool m_isFirstPlay = false;
 
 	protected override void Start()
 	{
@@ -26,12 +30,32 @@ public class ExplosionBall : BaseBall
     {
 		m_counter -= Time.deltaTime;
 
-		if (m_counter <= 0.0f)
+		if (m_counter <= 1.0f)
 		{
-			var obj = Instantiate(m_explosionEffect);
-			obj.transform.position = transform.position;
-			obj.SetActive(true);
-			Destroy(gameObject);
+			m_seCounter += Time.deltaTime;
+			if (m_seCounter < 0.1f)
+				m_sprite.color = Color.red;
+			else
+				m_sprite.color = Color.white;
+
+			if (m_seCounter > 0.2f)
+			{
+				m_seCounter -= 0.2f;
+				m_audioSource.PlayOneShot(m_audioSource.clip);
+			}
+			else if (!m_isFirstPlay)
+			{
+				m_isFirstPlay = true;
+				m_audioSource.PlayOneShot(m_audioSource.clip);
+			}
+
+			if (m_counter <= 0.0f)
+			{
+				var obj = Instantiate(m_explosionEffect);
+				obj.transform.position = transform.position;
+				obj.SetActive(true);
+				Destroy(gameObject);
+			}
 		}
 	}
 }

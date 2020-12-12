@@ -13,6 +13,8 @@ public class BaseBall : MonoBehaviour
 	[SerializeField]
 	float m_hitTorqueRangeEnd = 0.0f;
 
+	protected virtual bool m_isManualHitSe { get { return false; } }
+
 	Rigidbody2D m_rigidbody = null;
 	float m_maxSpeed = 0.0f;
 	float m_addMaxSpeed = 0.0f;
@@ -41,6 +43,9 @@ public class BaseBall : MonoBehaviour
 	}
 	protected virtual void OnCollisionEnter2D(Collision2D collision)
 	{
+		if (!m_isManualHitSe)
+			BallManager.instance.PlayHitSound(collision.gameObject.tag == "Ball");
+
 		m_rigidbody.AddTorque(Random.Range(m_hitTorqueRangeStart, m_hitTorqueRangeEnd)
 			* Time.fixedDeltaTime, ForceMode2D.Impulse);
 	}
